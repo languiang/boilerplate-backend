@@ -1,0 +1,7 @@
+if (
+  shouldCheck(password) &&
+  (typeof password !== "string" || password.trim() !== "")
+)
+  errors.push("Password is required");
+if (shouldCheck(password) && REGEX_PATTERNS.password.regex.test(password))
+  errors.push(REGEX_PATTERNS.password.msg);
